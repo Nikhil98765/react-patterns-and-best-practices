@@ -1,5 +1,7 @@
 import { createContext, useContext, useState } from "react";
 import { AccordionItem } from "./AccordionItem";
+import { AccordionTitle } from "./AccordionTitle";
+import { AccordionContent } from "./AccordionContent";
 
 
 const AccordionContext = createContext();
@@ -35,4 +37,7 @@ export const Accordion = ({ children, className }) => {
   );
 }
 
+// * In compound components pattern, main component function will be used as an object in order to merge all other identifiers related to main component.
 Accordion.Item = AccordionItem;
+Accordion.Title = AccordionTitle;
+Accordion.Content = AccordionContent;
